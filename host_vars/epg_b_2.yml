@@ -1,0 +1,13 @@
+
+aci_epg:
+  description: EPG blue two
+  bd: blue_db
+  tenant: blue
+  ap: ap_blue_db
+  contracts:
+    - contract_type: provider
+      contract: db
+      priority: level1
+    - contract_type: provider
+      contract: console
+      state: present

@@ -1,0 +1,25 @@
+---
+# yaml plugin used
+
+all: 
+  hosts: 
+    sandboxapicdc:
+      ansible_host: sandboxapicdc.cisco.com
+      ansible_user: admin
+      ansible_ssh_pass: ciscopsdt
+    epg_b_1:
+    epg_b_2:
+    epg_g_1:
+    epg_g_2:
+  children:
+    epg:
+      children:
+        blue:
+          hosts: 
+            epg_b_[1:2]:
+        green:
+          hosts: 
+            epg_g_[1:2]:
+    apic:
+      hosts:
+        sandboxapicdc:
