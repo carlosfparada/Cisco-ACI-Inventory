@@ -4,10 +4,14 @@
 all: 
   hosts: 
     sandboxapicdc:
-      ansible_host: sandboxapicdc.cisco.com
-      ansible_user: admin
-      #ansible_ssh_pass: ciscopsdt
-      ansible_ssh_pass: "!v3G@!4@Y"
+      # ansible_host: sandboxapicdc.cisco.com
+      # ansible_user: admin
+      # #ansible_ssh_pass: ciscopsdt
+      # ansible_ssh_pass: "!v3G@!4@Y"
+      # aci_validate_certs: no
+      ansible_host: devnetsandbox-usw1-reservation.cisco.com:20275
+      ansible_user: cparadared
+      ansible_ssh_pass: "RETPBYXE"
       aci_validate_certs: no
     epg_b_1:
     epg_b_2:
